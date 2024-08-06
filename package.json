@@ -1,0 +1,12 @@
+{
+  "name": "@lintkit/eslint-config",
+  "version": "0.1.0",
+  "description": "LintKit: EsLint Config",
+  "author": "Mike Street <mike@liquidlight.co.uk>",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^9.5.0",
+    "eslint-plugin-playwright": "^1.6.2",
+    "globals": "^15.4.0"
+  }
+}
