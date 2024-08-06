@@ -3,10 +3,18 @@
   "version": "0.1.0",
   "description": "LintKit: EsLint Config",
   "author": "Mike Street <mike@liquidlight.co.uk>",
+  "homepage": "https: //github.com/lintkit/eslint-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lintkit/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lintkit/eslint-config/issues"
+  },
   "license": "ISC",
   "dependencies": {
-    "eslint": "^9.5.0",
-    "eslint-plugin-playwright": "^1.6.2",
-    "globals": "^15.4.0"
+    "eslint": "^9.5",
+    "eslint-plugin-playwright": "^1.6",
+    "globals": "^15.4"
   }
 }
