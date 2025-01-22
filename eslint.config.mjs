@@ -2,6 +2,7 @@ import js from '@eslint/js';
 import playwright from 'eslint-plugin-playwright'
 import globals from 'globals';
 import json from '@eslint/json';
+import markdown from '@eslint/markdown';
 
 // All the rules! http://eslint.org/docs/rules/
 export default [
@@ -25,6 +26,17 @@ export default [
 		files: ['*.json5', '**/*.json5'],
 		language: 'json/json5',
 		...json.configs.recommended,
+	},
+
+	{
+		files: ['*.md', '**/*.md'],
+		plugins: {
+			markdown
+		},
+		language: 'markdown/commonmark',
+		rules: {
+			'markdown/no-html': 'error'
+		}
 	},
 
 	{
