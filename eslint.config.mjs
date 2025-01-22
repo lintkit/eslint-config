@@ -1,9 +1,32 @@
 import js from '@eslint/js';
 import playwright from 'eslint-plugin-playwright'
 import globals from 'globals';
+import json from '@eslint/json';
 
 // All the rules! http://eslint.org/docs/rules/
 export default [
+	// lint JSON files
+	{
+		files: ['*.json', '**/*.json'],
+		ignores: ['package-lock.json'],
+		language: 'json/json',
+		...json.configs.recommended,
+	},
+
+	// lint JSONC files
+	{
+		files: ['*.jsonc', '**/*.jsonc'],
+		language: 'json/jsonc',
+		...json.configs.recommended,
+	},
+
+	// lint JSON5 files
+	{
+		files: ['*.json5', '**/*.json5'],
+		language: 'json/json5',
+		...json.configs.recommended,
+	},
+
 	{
 		...js.configs.recommended,
 		...playwright.configs['flat/jest-playwright'],
