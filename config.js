@@ -39,9 +39,30 @@ export default {
 		}
 	},
 
+	'playwright': {
+		...playwright.configs['flat/recommended'],
+		files: [
+			'playwright.config.ts',
+			'**/*.unit.ts',
+			'**/*.spec.ts',
+			'**/*.test.ts',
+			'**/Fixtures/*.ts',
+		],
+		rules: {
+			...playwright.configs['flat/recommended'].rules,
+			'playwright/no-conditional-in-test': 'off', // Disallow conditional logic in tests
+			'playwright/no-conditional-expect': 'off', // Disallow conditional logic in tests
+			'playwright/valid-title': [
+				'error',
+				{
+					'ignoreTypeOfTestName': true // Allow variables as test names
+				}
+			]
+		},
+	},
+
 	'js': {
 		...js.configs.recommended,
-		...playwright.configs['flat/jest-playwright'],
 		ignores: [
 			'**/Resources/Public/**',
 			'**/lib/**',
@@ -50,17 +71,12 @@ export default {
 			'**/vendor/**',
 			'**/backup/**',
 			'**/ci/**',
-			'**/build/dashboard/**',
 			'**/snapshots/**',
 			'**/docs/build/**',
 		],
 		files: [
 			'*.js',
-			'**/*.js',
-			'*.ts',
-			'**/*.test.ts',
-			'*.spec.ts',
-			'**/*.spec.ts'
+			'**/*.js'
 		],
 		languageOptions: {
 			ecmaVersion: 2022,
@@ -275,15 +291,7 @@ export default {
 			'prefer-reflect': 'off', // suggest using Reflect methods where applicable
 			'prefer-spread': 'off', // suggest using the spread operator instead of .apply()
 			'prefer-template': 'off', // suggest using template literals instead of strings concatenation
-			'require-yield': 'off', // disallow generator functions that do not have yield
-			'playwright/no-conditional-in-test': 'off', // Disallow conditional logic in tests
-			'playwright/no-conditional-expect': 'off', // Disallow conditional logic in tests
-			'playwright/valid-title': [
-				'error',
-				{
-					'ignoreTypeOfTestName': true // Allow variables as test names
-				}
-			]
+			'require-yield': 'off' // disallow generator functions that do not have yield
 		}
 	}
 };
