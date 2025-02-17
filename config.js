@@ -13,7 +13,9 @@ export default {
 			'**/lib/**',
 			'**/libs/**',
 			'**/Resources/Public/**',
-			'**/snapshots/**'
+			'**/snapshots/**',
+			'**/TypoScript/**',
+			'**/Configuration/**'
 		]
 	},
 
