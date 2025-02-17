@@ -16,7 +16,7 @@
     "@eslint/json": "^0.9.1",
     "@eslint/markdown": "^6.2.1",
     "eslint": "^9.5",
-    "eslint-plugin-playwright": "^1.6",
+    "eslint-plugin-playwright": "^2.0",
     "globals": "^15.4"
   }
 }
