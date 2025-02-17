@@ -1,11 +1,22 @@
 import js from '@eslint/js';
 import playwright from 'eslint-plugin-playwright'
+import gitignore from 'eslint-config-flat-gitignore'
 import globals from 'globals';
 import json from '@eslint/json';
 import markdown from '@eslint/markdown';
 
-// All the rules! http://eslint.org/docs/rules/
 export default {
+	'gitignore': gitignore(),
+
+	'global': {
+		ignores: [
+			'**/lib/**',
+			'**/libs/**',
+			'**/Resources/Public/**',
+			'**/snapshots/**'
+		]
+	},
+
 	// lint JSON files
 	'json': {
 		files: ['*.json', '**/*.json'],
@@ -63,20 +74,11 @@ export default {
 
 	'js': {
 		...js.configs.recommended,
-		ignores: [
-			'**/Resources/Public/**',
-			'**/lib/**',
-			'**/libs/**',
-			'**/html/**',
-			'**/vendor/**',
-			'**/backup/**',
-			'**/ci/**',
-			'**/snapshots/**',
-			'**/docs/build/**',
-		],
 		files: [
 			'*.js',
-			'**/*.js'
+			'**/*.js',
+			'*.ts',
+			'**/*.ts'
 		],
 		languageOptions: {
 			ecmaVersion: 2022,
