@@ -114,6 +114,7 @@ export default {
 		},
 		rules: {
 			...js.configs.recommended.rules,
+			'no-mixed-spaces-and-tabs': ['error', false],
 			'one-var': ['error', 'consecutive'],
 			'capitalized-comments': [
 				"error",
