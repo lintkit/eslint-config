@@ -114,7 +114,7 @@ export default {
 		},
 		rules: {
 			...js.configs.recommended.rules,
-			'one-var': 'error',
+			'one-var': ['error', 'consecutive'],
 			'capitalized-comments': 'error',
 			'prefer-template': 'warn',
 			'prefer-const': 'error',
