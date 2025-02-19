@@ -115,7 +115,14 @@ export default {
 		rules: {
 			...js.configs.recommended.rules,
 			'one-var': ['error', 'consecutive'],
-			'capitalized-comments': 'error',
+			'capitalized-comments': [
+				"error",
+				"always",
+				{
+					"ignorePattern": "bearer",
+					"ignoreConsecutiveComments": true
+				}
+			],
 			'prefer-template': 'warn',
 			'prefer-const': 'error',
 			'no-shadow': 'error',
