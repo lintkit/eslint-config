@@ -5,6 +5,7 @@ import globals from 'globals';
 import json from '@eslint/json';
 import markdown from '@eslint/markdown';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+import stylistic from '@stylistic/eslint-plugin';
 
 export default {
 	'gitignore': gitignore(),
@@ -91,6 +92,10 @@ export default {
 
 	'js': {
 		...js.configs.recommended,
+		plugins: {
+			...js.configs.recommended.plugins,
+			'@stylistic': stylistic
+		},
 		files: [
 			'*.js',
 			'**/*.js',
@@ -132,7 +137,8 @@ export default {
 			'dot-notation': 'error',
 			'prefer-object-has-own': 'error',
 			'object-shorthand': 'error',
-			'radix': ['error', 'as-needed']
+			'radix': ['error', 'as-needed'],
+			'@stylistic/indent': ['error', 'tab'],
 		}
 	}
 };
