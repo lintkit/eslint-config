@@ -5,7 +5,7 @@ import globals from 'globals';
 import json from '@eslint/json';
 import markdown from '@eslint/markdown';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
-import stylistic from '@stylistic/eslint-plugin';
+import stylistic from '@stylistic/eslint-plugin'
 
 export default {
 	'gitignore': gitignore(),
@@ -90,12 +90,32 @@ export default {
 		}
 	},
 
+	'stylistic': {
+		...stylistic.configs.recommended,
+		files: [
+			'*.js',
+			'**/*.js',
+			'*.ts',
+			'**/*.ts'
+		],
+		rules: {
+			...stylistic.configs.recommended.rules,
+			'@stylistic/brace-style': 'error',
+			'@stylistic/indent': ['error', 'tab'],
+			'@stylistic/no-tabs': [
+				'error',
+				{
+					allowIndentationTabs: true
+				}
+			],
+			'@stylistic/operator-linebreak': ['error', 'after'],
+			'@stylistic/semi': 'error',
+			'@stylistic/space-before-function-paren': ['error', 'never'],
+		}
+	},
+
 	'js': {
 		...js.configs.recommended,
-		plugins: {
-			...js.configs.recommended.plugins,
-			'@stylistic': stylistic
-		},
 		files: [
 			'*.js',
 			'**/*.js',
@@ -119,13 +139,13 @@ export default {
 		},
 		rules: {
 			...js.configs.recommended.rules,
-			'@stylistic/indent': ['error', 'tab'],
+
 			'capitalized-comments': [
 				'error',
 				'always',
 				{
-					'ignorePattern': 'bearer',
-					'ignoreConsecutiveComments': true
+					ignorePattern: 'bearer',
+					ignoreConsecutiveComments: true
 				}
 			],
 			'dot-notation': 'error',
