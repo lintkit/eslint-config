@@ -119,26 +119,26 @@ export default {
 		},
 		rules: {
 			...js.configs.recommended.rules,
-			'no-mixed-spaces-and-tabs': ['error', false],
-			'one-var': ['error', 'consecutive'],
+			'@stylistic/indent': ['error', 'tab'],
 			'capitalized-comments': [
-				"error",
-				"always",
+				'error',
+				'always',
 				{
-					"ignorePattern": "bearer",
-					"ignoreConsecutiveComments": true
+					'ignorePattern': 'bearer',
+					'ignoreConsecutiveComments': true
 				}
 			],
-			'prefer-template': 'warn',
-			'prefer-const': 'error',
-			'no-shadow': 'error',
-			'no-bitwise': 'error',
-			'eqeqeq': 'error',
 			'dot-notation': 'error',
-			'prefer-object-has-own': 'error',
+			'eqeqeq': 'error',
+			'no-bitwise': 'error',
+			'no-mixed-spaces-and-tabs': ['error', false],
+			'no-shadow': 'error',
 			'object-shorthand': 'error',
+			'one-var': ['error', 'consecutive'],
+			'prefer-const': 'error',
+			'prefer-object-has-own': 'error',
+			'prefer-template': 'warn',
 			'radix': ['error', 'as-needed'],
-			'@stylistic/indent': ['error', 'tab'],
 		}
 	}
 };
