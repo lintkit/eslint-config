@@ -1,6 +1,6 @@
 import js from '@eslint/js';
-import playwright from 'eslint-plugin-playwright'
-import gitignore from 'eslint-config-flat-gitignore'
+import playwright from 'eslint-plugin-playwright';
+import gitignore from 'eslint-config-flat-gitignore';
 import globals from 'globals';
 import json from '@eslint/json';
 import markdown from '@eslint/markdown';
@@ -8,9 +8,9 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import stylistic from '@stylistic/eslint-plugin';
 
 export default {
-	'gitignore': gitignore(),
+	gitignore: gitignore(),
 
-	'global': {
+	global: {
 		ignores: [
 			'**/Configuration/**',
 			'**/lib/**',
@@ -18,14 +18,14 @@ export default {
 			'**/Resources/Public/**',
 			'**/snapshots/**',
 			'**/TypoScript/**',
-		]
+		],
 	},
 
-	// lint JSON files
-	'json': {
+	// Lint JSON files
+	json: {
 		files: [
 			'*.json',
-			'**/*.json'
+			'**/*.json',
 		],
 		ignores: [
 			'package-lock.json',
@@ -34,41 +34,41 @@ export default {
 		...json.configs.recommended,
 	},
 
-	// lint JSONC files
-	'jsonc': {
+	// Lint JSONC files
+	jsonc: {
 		files: [
 			'*.jsonc',
-			'**/*.jsonc'
+			'**/*.jsonc',
 		],
 		language: 'json/jsonc',
 		...json.configs.recommended,
 	},
 
-	// lint JSON5 files
-	'json5': {
+	// Lint JSON5 files
+	json5: {
 		files: [
 			'*.json5',
-			'**/*.json5'
+			'**/*.json5',
 		],
 		language: 'json/json5',
 		...json.configs.recommended,
 	},
 
-	'markdown': {
+	markdown: {
 		files: [
 			'*.md',
-			'**/*.md'
+			'**/*.md',
 		],
 		plugins: {
-			markdown
+			markdown,
 		},
 		language: 'markdown/commonmark',
 		rules: {
-			'markdown/no-html': 'error'
-		}
+			'markdown/no-html': 'error',
+		},
 	},
 
-	'js': {
+	js: {
 		...js.configs.recommended,
 		...stylistic.configs.recommended,
 		...eslintPluginUnicorn.configs.recommended,
@@ -99,7 +99,7 @@ export default {
 
 		plugins: {
 			'@stylistic': stylistic,
-			unicorn: eslintPluginUnicorn,
+			'unicorn': eslintPluginUnicorn,
 			playwright,
 		},
 
@@ -115,9 +115,9 @@ export default {
 				...globals.jquery,
 
 				// Undefined vars (no-undef)
-				'es6': true,
-				'node': true,
-				'google': true
+				es6: true,
+				node: true,
+				google: true,
 			},
 		},
 		rules: {
@@ -128,8 +128,8 @@ export default {
 				'always',
 				{
 					ignorePattern: 'bearer',
-					ignoreConsecutiveComments: true
-				}
+					ignoreConsecutiveComments: true,
+				},
 			],
 			'dot-notation': 'error',
 			'eqeqeq': 'error',
@@ -149,8 +149,8 @@ export default {
 			'playwright/valid-title': [
 				'error',
 				{
-					'ignoreTypeOfTestName': true // Allow variables as test names
-				}
+					ignoreTypeOfTestName: true, // Allow variables as test names
+				},
 			],
 
 			// Unicorn
@@ -164,12 +164,12 @@ export default {
 			'@stylistic/no-tabs': [
 				'error',
 				{
-					allowIndentationTabs: true
-				}
+					allowIndentationTabs: true,
+				},
 			],
 			'@stylistic/operator-linebreak': ['error', 'after'],
 			'@stylistic/semi': 'error',
 			'@stylistic/space-before-function-paren': ['error', 'never'],
-		}
-	}
+		},
+	},
 };
