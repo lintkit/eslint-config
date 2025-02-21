@@ -1,3 +1,11 @@
+# 1.2.0
+
+**21st February 2025**
+
+#### Feature
+
+- Add future compatibility - set some things to warning which are enforced in v2
+
 # 1.1.0
 
 **23rd January 2025**
