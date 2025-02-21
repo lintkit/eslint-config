@@ -118,7 +118,7 @@ export default [
 			'curly': ['off', 'all'], // specify curly brace conventions for all control statements
 			'default-case': 'off', // require default case in switch statements
 			'dot-location': 'off', // enforces consistent newlines before or after dots
-			'dot-notation': ['off', {'allowKeywords': true}], // encourages use of dot notation whenever possible
+			'dot-notation': ['off', { 'allowKeywords': true }], // encourages use of dot notation whenever possible
 			'eqeqeq': 'off', // require the use of === and !==
 			'guard-for-in': 'off', // make sure for-in loops have an if statement
 			'no-alert': 'off', // disallow the use of alert, confirm, and prompt
@@ -163,7 +163,7 @@ export default [
 			'no-useless-call': 'off', // disallow unnecessary .call() and .apply()
 			'no-useless-concat': 'off', // disallow unnecessary concatenation of literals or template literals
 			'no-void': 'off', // disallow use of void operator
-			'no-warning-comments': ['off', {'terms': ['todo', 'fixme', 'xxx'], 'location': 'start'}], // disallow usage of configurable warning terms in comments: e.g. todo
+			'no-warning-comments': ['off', { 'terms': ['todo', 'fixme', 'xxx'], 'location': 'start' }], // disallow usage of configurable warning terms in comments: e.g. todo
 			'no-with': 'off', // disallow use of the with statement
 			'radix': 'off', // require use of the second argument for parseInt()
 			'vars-on-top': 'off', // requires to declare all vars on top of their containing scope
@@ -183,7 +183,7 @@ export default [
 			'no-undef-init': 'off', // disallow use of undefined when initializing variables
 			'no-undef': 'warn', // disallow use of undeclared variables unless mentioned in a /*global */ block
 			'no-undefined': 'warn', // disallow use of undefined variable
-			'no-unused-vars': ['error', {'vars': 'all', 'args': 'after-used'}], // disallow declaration of variables that are not used in the code
+			'no-unused-vars': ['error', { 'vars': 'all', 'args': 'after-used' }], // disallow declaration of variables that are not used in the code
 			'no-use-before-define': 'off', // disallow use of variables before they are defined
 
 			// Node.js & CommonJS
@@ -194,8 +194,8 @@ export default [
 			'block-spacing': 'off', // disallow or enforce spaces inside of single line blocks
 			'brace-style': ['warn', '1tbs'], // enforce one true brace style
 			'camelcase': 'off', // require camel case names
-			'comma-dangle': ['error', 'never'], // disallow trailing commas in object literals
-			'comma-spacing': ['warn', {'before': false, 'after': true}], // enforce spacing before and after comma
+			'comma-dangle': ['warn', 'always-multiline'], // disallow trailing commas in object literals
+			'comma-spacing': ['warn', { 'before': false, 'after': true }], // enforce spacing before and after comma
 			'comma-style': ['warn', 'last'], // enforce one true comma style
 			'computed-property-spacing': ['off', 'never'], // require or disallow padding inside computed properties
 			'consistent-this': ['off', 'that'], // enforces consistent naming when capturing the current execution context
@@ -208,7 +208,7 @@ export default [
 				'SwitchCase': 1
 			}], // this option sets a specific tab width for your code
 			'jsx-quotes': 'off', // specify whether double or single quotes should be used in JSX attributes
-			'key-spacing': ['warn', {'beforeColon': false, 'afterColon': true}], // enforces spacing between keys and values in object literal properties
+			'key-spacing': ['warn', { 'beforeColon': false, 'afterColon': true }], // enforces spacing between keys and values in object literal properties
 			'linebreak-style': ['warn', 'unix'], // disallow mixed 'LF' and 'CRLF' as linebreaks
 			'lines-around-comment': 'off', // enforces empty lines around comments
 			'max-depth': ['off', 4], // specify the maximum depth that blocks can be nested
@@ -224,7 +224,7 @@ export default [
 			'no-inline-comments': 'off', // disallow comments inline after code
 			'no-lonely-if': 'warn', // disallow if as the only statement in an else block
 			'no-mixed-spaces-and-tabs': ['error', false], // disallow mixed spaces and tabs for indentation
-			'no-multiple-empty-lines': ['off', {'max': 2}], // disallow multiple empty lines
+			'no-multiple-empty-lines': ['off', { 'max': 2 }], // disallow multiple empty lines
 			'no-negated-condition': 'warn', // disallow negated conditions
 			'no-nested-ternary': 'off', // disallow nested ternary expressions
 			'no-new-object': 'off', // disallow use of the Object constructor
@@ -235,15 +235,15 @@ export default [
 			'no-trailing-spaces': 'warn', // disallow trailing whitespace at the end of lines
 			'no-underscore-dangle': 'off', // disallow dangling underscores in identifiers
 			'no-unneeded-ternary': 'warn', // disallow the use of Boolean literals in conditional expressions
-			'object-curly-spacing': ['warn', 'never'], // require or disallow padding inside curly braces
+			'object-curly-spacing': ['warn', 'always'], // require or disallow padding inside curly braces
 			'one-var': 'off', // allow just one var statement per function
 			'operator-assignment': ['off', 'always'], // require assignment operator shorthand where possible or prohibit it entirely
 			'operator-linebreak': 'off', // enforce operators to be placed before or after line breaks
 			'padded-blocks': 'off', // enforce padding within blocks
 			'quote-props': 'off', // require quotes around object literal property names
-			'quotes': ['warn', 'single', {'allowTemplateLiterals': true}], // specify whether double or single quotes should be used
+			'quotes': ['warn', 'single', { 'allowTemplateLiterals': true }], // specify whether double or single quotes should be used
 			'require-jsdoc': 'off', // Require JSDoc comment
-			'semi-spacing': ['error', {'before': false, 'after': true}], // enforce spacing before and after semicolons
+			'semi-spacing': ['error', { 'before': false, 'after': true }], // enforce spacing before and after semicolons
 			'semi-style': ['error', 'last'], // enforce location of semicolons
 			'semi': ['warn', 'always'], // require or disallow use of semicolons instead of ASI
 			'sort-vars': 'off', // sort variables within the same declaration block
@@ -252,8 +252,8 @@ export default [
 			'space-before-function-paren': ['error', 'never'], // require or disallow space before function opening parenthesis
 			'space-in-parens': ['off', 'never'], // require or disallow spaces inside parentheses
 			'space-infix-ops': 'warn', // require spaces around operators
-			'space-unary-ops': ['off', {'words': true, 'nonwords': false}], // Require or disallow spaces before/after unary operators
-			'spaced-comment': ['error', 'always', {'markers': ['!', '=require', '=include']}], // require or disallow a space immediately following the // or /* in a comment
+			'space-unary-ops': ['off', { 'words': true, 'nonwords': false }], // Require or disallow spaces before/after unary operators
+			'spaced-comment': ['error', 'always', { 'markers': ['!', '=require', '=include'] }], // require or disallow a space immediately following the // or /* in a comment
 			'switch-colon-spacing': 'error',
 			'wrap-regex': 'off', // require regex literals to be wrapped in parentheses
 
