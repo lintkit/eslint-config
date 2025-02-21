@@ -15,8 +15,11 @@
   "dependencies": {
     "@eslint/json": "^0.9.1",
     "@eslint/markdown": "^6.2.1",
+    "@stylistic/eslint-plugin": "^4.0.1",
     "eslint": "^9.5",
-    "eslint-plugin-playwright": "^1.6",
+    "eslint-config-flat-gitignore": "^2.0.0",
+    "eslint-plugin-playwright": "^2.0",
+    "eslint-plugin-unicorn": "^57.0.0",
     "globals": "^15.4"
   }
 }

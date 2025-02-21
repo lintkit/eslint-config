@@ -33,13 +33,12 @@ Update the `script` to use `eslint.config.mjs` instead of the LintKit one.
 You can then include the LintKit config and add cusomtisations where required.
 
 ```js
-import base from '@lintkit/eslint-config/eslint.config.mjs';
+import config from '@lintkit/eslint-config/config.js';
 
-export default [{
-	...base[0],
-	ignores: [
-		...base[0].ignores,
-		'**/.Build/**',
-	]
-}]
+config.js.ignores: [
+	...config.js.ignores,
+	'**/.Build/**',
+]
+
+export default Object.values(config);
 ```
