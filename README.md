@@ -19,7 +19,7 @@ Add the scripts to your `package.json`
 
 ```json
 "scripts": {
-  "eslint:dry-run": "eslint app --color --cache --config node_modules/@lintkit/eslint-config/eslint.config.mjs --cache-location .cache/ --cache-strategy content",
+  "eslint:dry-run": "eslint app --color --cache --config node_modules/@lintkit/eslint-config/eslint.config.js --cache-location .cache/ --cache-strategy content",
   "eslint:fix": "npm run eslint:dry-run -- --fix",
 }
 ```
@@ -42,3 +42,7 @@ config.js.ignores: [
 
 export default Object.values(config);
 ```
+
+## Upgrading to v2
+
+- Any references to `eslint-config/eslint.config.mjs` should be corrected to `eslint-config/eslint.config.js`
