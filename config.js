@@ -156,6 +156,7 @@ export default {
 			// Unicorn
 			...eslintPluginUnicorn.configs.recommended.rules,
 			'unicorn/prefer-global-this': 'warn',
+			'unicorn/no-null': 'off',
 
 			// Stylistic
 			...stylistic.configs.recommended.rules,
