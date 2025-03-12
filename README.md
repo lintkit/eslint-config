@@ -26,11 +26,11 @@ Add the scripts to your `package.json`
 
 ## Local Override
 
-If you need to override some of the config (but keep LintKit defaults), place a file in the root of your project (`eslint.config.mjs`)
+If you need to override some of the config (but keep LintKit defaults), place a file in the root of your project `eslint.config.js` (or `eslint.config.mjs` if required)
 
-Update the `script` to use `eslint.config.mjs` instead of the LintKit one.
+Update the `script` to use your local `eslint.config.js` file instead of the LintKit one.
 
-You can then include the LintKit config and add cusomtisations where required.
+You can then include the LintKit config and add customisations where required.
 
 ```js
 import config from '@lintkit/eslint-config/config.js';
@@ -45,4 +45,4 @@ export default Object.values(config);
 
 ## Upgrading to v2
 
-- Any references to `eslint-config/eslint.config.mjs` should be corrected to `eslint-config/eslint.config.js`
+- Any references to `node_modules/@lintkit/eslint-config/eslint.config.mjs` should be corrected to `node_modules/@lintkit/eslint-config/eslint.config.js`
