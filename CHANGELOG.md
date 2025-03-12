@@ -1,3 +1,14 @@
+# 2.0.0
+
+**12th March 2025**
+
+#### Features
+
+- Key the config for easier overriding & customisation
+- Separate out Playwright rules
+- Upgrade `eslint-plugin-playwright` to `^2.0`
+- Add `eslint-stylistic`
+
 # 1.2.0
 
 **21st February 2025**
