@@ -22,5 +22,9 @@
     "eslint-plugin-playwright": "^2.0",
     "eslint-plugin-unicorn": "^57.0.0",
     "globals": "^15.4"
+  },
+  "scripts": {
+    "eslint:dry-run": "eslint . --color --cache --config eslint.config.js --cache-location .cache/ --cache-strategy content",
+    "eslint:fix": "npm run eslint:dry-run -- --fix"
   }
 }
