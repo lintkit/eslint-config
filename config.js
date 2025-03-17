@@ -134,6 +134,7 @@ export default {
 			'dot-notation': 'error',
 			'eqeqeq': 'error',
 			'no-bitwise': 'error',
+			'no-console': ['error', { allow: ['warn', 'error'] }],
 			'no-mixed-spaces-and-tabs': ['error', false],
 			'no-shadow': 'error',
 			'object-shorthand': 'error',
