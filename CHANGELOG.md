@@ -1,3 +1,15 @@
+# 2.1.0
+
+**8th May 2025**
+
+#### Feature
+
+- Disallow `console.log()` (but allow `warn` and `error`)
+
+#### Fix
+
+- Remove `no-mixed-spaces-and-tabs`. as this is covered by stylistic
+
 # 2.0.0
 
 **12th March 2025**
