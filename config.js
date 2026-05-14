@@ -12,6 +12,7 @@ export default {
 
 	global: {
 		ignores: [
+			'**/.Build/**',
 			'**/Configuration/**',
 			'**/lib/**',
 			'**/libs/**',
