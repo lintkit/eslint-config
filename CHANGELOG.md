@@ -1,3 +1,11 @@
+# 2.1.1
+
+**14th May 2026**
+
+#### Fix
+
+- Ignore `.Build` folders
+
 # 2.1.0
 
 **8th May 2025**
