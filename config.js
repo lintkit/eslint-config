@@ -6,6 +6,7 @@ import json from '@eslint/json';
 import markdown from '@eslint/markdown';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import stylistic from '@stylistic/eslint-plugin';
+import tseslint from 'typescript-eslint';
 
 export default {
 	gitignore: gitignore(),
@@ -66,6 +67,17 @@ export default {
 		language: 'markdown/commonmark',
 		rules: {
 			'markdown/no-html': 'error',
+		},
+	},
+
+	typescript: {
+		files: [
+			'**/*.ts',
+			'**/*.cts',
+			'**/*.mts',
+		],
+		languageOptions: {
+			parser: tseslint.parser,
 		},
 	},
 
