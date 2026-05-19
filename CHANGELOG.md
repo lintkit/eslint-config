@@ -1,3 +1,11 @@
+# 2.2.0
+
+**19th May 2026**
+
+#### Feature
+
+- Add Typescript linting
+
 # 2.1.1
 
 **14th May 2026**

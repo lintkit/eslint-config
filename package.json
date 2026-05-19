@@ -1,6 +1,6 @@
 {
   "name": "@lintkit/eslint-config",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "type": "module",
   "description": "LintKit: EsLint Config",
   "author": "Mike Street <mike@liquidlight.co.uk>",
